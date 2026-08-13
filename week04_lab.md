@@ -1582,9 +1582,25 @@ GoRoute(
 > 💡 **หลีกเลี่ยงการขอโค้ดทั้งไฟล์จาก AI** ให้ลองเขียนเองก่อน ถ้าติดจริง ๆ ให้ถามเป็นจุด ๆ ไป (เช่น "ทำไม setState ใน Widget อื่นไม่ทำให้ Saved Screen รีเฟรช") จะได้เรียนรู้มากกว่าการคัดลอกมาทั้งหมด
 
 บันทึกรูปผลการทดลอง
-```image
+image
 บันทึกรูปโค้ด และรูปผลการทดลองที่นี่ 
-```
+
+<img width="1663" height="928" alt="image" src="https://github.com/user-attachments/assets/88af59cb-6068-4e03-8bf8-7ff3f4d0635d" />
+
+<img width="1513" height="809" alt="image" src="https://github.com/user-attachments/assets/943c7683-a340-40bb-bdda-67cd6498f557" />
+
+<img width="1154" height="817" alt="image" src="https://github.com/user-attachments/assets/59246cd1-ace1-4a79-9335-ba3a0404d4ef" />
+
+<img width="1298" height="789" alt="image" src="https://github.com/user-attachments/assets/a80f4fb4-147d-4929-8d42-e42e554bdc69" />
+
+<img width="1238" height="810" alt="image" src="https://github.com/user-attachments/assets/6277d9d7-9825-4db0-890d-f8adb52dd182" />
+
+<img width="724" height="489" alt="image" src="https://github.com/user-attachments/assets/ac4ee102-b191-4b90-9911-605f8f44dc21" />
+
+<img width="423" height="372" alt="image" src="https://github.com/user-attachments/assets/dd012450-51e3-42af-9f8d-2c054ea55876" />
+
+<img width="1919" height="1034" alt="image" src="https://github.com/user-attachments/assets/1e313652-f5e7-4adc-91fb-4d16efff22e4" />
+
 ---
 
 ## 📝 คำถามท้ายใบงาน
@@ -1593,24 +1609,34 @@ GoRoute(
 
 1. `LayoutBuilder` ต่างกับ `MediaQuery` อย่างไร? มีหลักการเลือกใช้แต่ละแบบในสถานการณ์ใด?
 ```text
+ MediaQueryเอาหน้าจออุปกรณ์ทั้งหมด
+ LayoutBuilder จะเอาขนาดของพื้นที่ที่ Widget แม่ให้มา
 
+MediaQuery เมื่อต้องการปรับเลย์เอาต์หลักตามขนาดจอ เช่น เช็คว่าเป็นจอคอมหรือมือถือเพื่อซ่อน แสดงเมนูด้านข้าง 
+LayoutBuilder เมื่อต้องการให้ Widget ย่อยๆ จัดเรียงตัวให้พอดีกับกรอบที่มันอยู่ เช่น การวาด GridView ให้มีจำนวนคอลัมน์พอดีกับความกว้างของการ์ดหรือคอนเทนเนอร์นั้นๆ 
 ```
 2. ทำไม Go Router ถึงใช้ `StatefulShellRoute` แทน `ShellRoute` ธรรมดา? ผลต่างเรื่อง State Management คืออะไร?
 ```text
+เพื่อให้แอปสามารถ จดจำสถานะStateของแต่ละแท็บเวลาสลับหน้าไปมาได้
 
+ใช้ ShellRoute ธรรมดา เมื่อผู้ใช้สลับแท็บ จากแท็บ Explore ไป Saved แล้วกลับมา Explore หน้าจอจะสร้างใหม่ทั้งหมด ตำแหน่งการไถหน้าจอหรือข้อมูลที่พิมพ์ค้างไว้จะหายไป
+StatefulShellRoute เบื้องหลังจะใช้ IndexedStack ทำให้หน้าจอแต่ละแท็บยังคงทำงานอยู่เบื้องหลัง เมื่อสลับแท็บกลับมา ทุกอย่างจะยังคงอยู่ที่เดิม บั๊กที่หน้า Saved ไม่ยอมรีเฟรชตอนกดปุ่มหัวใจในโจทย์ท้าทายด้วย
 ```
 3. ในโค้ด `DestinationCard` เหตุใดจึงใช้ `Expanded` ครอบ `Text` ชื่อ Destination ? จะเกิดอะไรขึ้นถ้าลบออก?
 ```text
-
+Expanded เป็นตัวบังคับให้ Text นำพื้นที่ที่เหลือทั้งหมดในแกนนั้น มาใช้งานอย่างพอดี
+ชื่อ Destination หรือข้อความมีความยาวมากๆ มันจะพยายามดันตัวเองให้กว้างที่สุดจนทะลุขอบหน้าจอ ทำให้เกิด Error ยอดฮิตแถบสีเหลืองดำที่เรียกว่า RenderFlex overflowed
 ```
 4. การส่งข้อมูลผ่าน `extra` ของ Go Router มีข้อจำกัดอะไรกรณี Deep Link / Web Refresh? และแก้ปัญหานี้ได้อย่างไร?
 ```text
-
+ข้อมูลที่ส่งผ่าน extra จะถูกเก็บอยู่ใน หน่วยความจำ ของแอป หากผู้ใช้นำ URL Deep Link ไปเปิดใหม่ หรือกดปุ่ม Refresh บน Web Browser ข้อมูล extra นี้จะหายไปทันที (กลายเป็น null) และทำให้หน้าจอนั้นพัง
+ไม่ควรส่งข้อมูลทั้งก้อนผ่าน extra แต่ให้ส่งเป็น ID ผ่าน Path Parameter แทน (เช่น /detail/:id) แล้วให้หน้าปลายทางนำ ID ไปค้นหาหรือดึงข้อมูลจาก Database/State Management แทนครับ
 ```
 5. วาด Navigation Hierarchy ของแอปนี้ (สามารถวาดบนกระดาษแล้วถ่ายรูปส่งได้)
-```text
 
-```
+![Uploading image.png…]()
+
+
 ---
 
 ## 📤 การส่งงาน
