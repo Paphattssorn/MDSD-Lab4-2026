@@ -484,9 +484,17 @@ class DestinationCard extends StatelessWidget {
 > 3. เขียน Comment สั้น ๆ ในโค้ดของตัวเองอธิบายว่าทำไมต้องใช้ `Positioned` คู่กับ `Stack` ถึงจะย้ายตำแหน่ง Badge ได้ (ถ้าใช้ `Positioned` นอก `Stack` จะเกิดอะไรขึ้น)
 
 บันทึกรูปผลการทดลอง
-```image
+image
 บันทึกรูปโค้ด และรูปผลการทดลองที่นี่ (กรณีที่ยังไม่สามารถรันได้ ให้ทดลองจนถึงขั้นตอนที่สามารถ capture รูปได้และบันทึกรูปไว้ในส่วนนี้)
-```
+
+รูปโค้ด
+<img width="822" height="914" alt="image" src="https://github.com/user-attachments/assets/902d17ce-3ee1-4ec8-993e-54a97dbc8504" />
+<img width="1451" height="800" alt="image" src="https://github.com/user-attachments/assets/e3adcf67-2719-4414-b3f2-d30d3c31b7f6" />
+<img width="1241" height="797" alt="image" src="https://github.com/user-attachments/assets/a7b4b1ec-cabb-4e7f-9daf-4e6d3fc7008c" />
+<img width="1404" height="799" alt="image" src="https://github.com/user-attachments/assets/f54de693-8f1f-497e-83f0-53df6a056df3" />
+
+รูปผลการทดลอง
+
 ---
 
 ### การทดลองที่ 4 — สร้าง Screens
