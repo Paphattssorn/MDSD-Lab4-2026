@@ -1634,7 +1634,8 @@ Expanded เป็นตัวบังคับให้ Text นำพื้�
 ```
 5. วาด Navigation Hierarchy ของแอปนี้ (สามารถวาดบนกระดาษแล้วถ่ายรูปส่งได้)
 
-![Uploading image.png…]()
+<img width="423" height="372" alt="image" src="https://github.com/user-attachments/assets/4a738a10-3998-48fa-a06e-6d23e869aeda" />
+
 
 
 ---
