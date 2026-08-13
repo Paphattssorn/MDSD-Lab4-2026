@@ -650,6 +650,17 @@ class _ExploreScreenState extends State<ExploreScreen> {
 บันทึกรูปผลการทดลอง
 ```image
 บันทึกรูปโค้ด และรูปผลการทดลองที่นี่ (กรณีที่ยังไม่สามารถรันได้ ให้ทดลองจนถึงขั้นตอนที่สามารถ capture รูปได้และบันทึกรูปไว้ในส่วนนี้)
+
+บันทึกรูปโค้ด
+<img width="1014" height="923" alt="image" src="https://github.com/user-attachments/assets/9b52b32c-2ad8-41bf-90ac-0a4d74e4c25a" />
+<img width="928" height="801" alt="image" src="https://github.com/user-attachments/assets/7c73451d-d2da-4734-85ee-f89d3a48f994" />
+<img width="1195" height="805" alt="image" src="https://github.com/user-attachments/assets/81db1d0f-aeff-459f-89f2-0d936671e2cd" />
+<img width="610" height="270" alt="image" src="https://github.com/user-attachments/assets/bc779b48-9b3e-4881-ab0d-3d69cc3cbd72" />
+
+
+รูปผลการทดลอง
+
+
 ```
 
 #### ขั้นตอนที่ 4.2 — Destination Detail Screen
