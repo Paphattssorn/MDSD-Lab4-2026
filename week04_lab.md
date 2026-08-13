@@ -1122,9 +1122,17 @@ class _StatCard extends StatelessWidget {
 > 3. เขียน Comment อธิบายว่าทำไมต้องใส่ `shrinkWrap: true` และ `NeverScrollableScrollPhysics()` เมื่อวาง `ListView` ซ้อนอยู่ใน `Column` ที่อยู่ใน `SingleChildScrollView` อีกที (จะเกิดอะไรขึ้นถ้าไม่ใส่)
 
 บันทึกรูปผลการทดลอง
-```image
+image
 บันทึกรูปโค้ด และรูปผลการทดลองที่นี่ (กรณีที่ยังไม่สามารถรันได้ ให้ทดลองจนถึงขั้นตอนที่สามารถ capture รูปได้และบันทึกรูปไว้ในส่วนนี้)
-```
+บันทึกรูปโค้ด
+<img width="1287" height="937" alt="image" src="https://github.com/user-attachments/assets/da4d039f-3918-42e9-903c-d50e792a47ad" />
+<img width="1291" height="799" alt="image" src="https://github.com/user-attachments/assets/411181b1-39f6-4800-aed4-da0ebabd38b2" />
+<img width="1475" height="799" alt="image" src="https://github.com/user-attachments/assets/5dceedc4-4a3f-4cf5-bcf3-40967e894ed6" />
+<img width="1367" height="820" alt="image" src="https://github.com/user-attachments/assets/6f73a076-9ae9-44df-8f44-f126b0cee007" />
+<img width="1030" height="809" alt="image" src="https://github.com/user-attachments/assets/9ad155af-8637-4395-88f9-35bea4122e17" />
+<img width="1152" height="264" alt="image" src="https://github.com/user-attachments/assets/cff45096-632e-4a84-8515-89dca38deacf" />
+
+รูปผลการทดลอง
 
 สร้างไฟล์ `lib/screens/saved_screen.dart`:
 
